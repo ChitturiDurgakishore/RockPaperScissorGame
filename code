@@ -1,0 +1,13 @@
+import random
+def play():
+    user=input("Enter \n r for rock, \n s for scissor, \n p for paper :")
+    choice=random.choice(['r','s','p'])
+    if(choice==user):
+        return 'Its a draw . A tie'
+        
+    elif(choice=='r' and user=='s' or choice=='s' and user=='p'or choice=='p' and user=='r'):
+        return "Computer won ! You lost"
+
+    elif(user=='r' and choice=='s' or user=='s' and choice=='p'or user=='p' and choice=='r'):
+        return "You won ! Congrats"
+print(play())
